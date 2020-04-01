@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simple interset in javascript</title>
+    <style>
+      body {
+        background-color: darkslategray;
+        margin-left: 450px;
+        margin-top: 250px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simple Interest In javascript</h1>
+
+    <lable>Enter principle Amount</lable>
+    <input type="number" id="p" /><br />
+
+    <label>Enter a rate interest</label>
+    <input type="number" id="r" /><br />
+
+    <label>Enter atime of year</label>
+    <input type="number" id="y" /><br />
+    <label>Simple interest</label>
+    <input type="text" id="s" /><br />
+
+    <input type="submit" onclick="simple()" />
+
+    <script type="text/javascript">
+      document.getElementById("s").disabled = "true";
+
+      function simple() {
+        var p = document.getElementById("p").value;
+        var r = document.getElementById("r").value;
+        var y = document.getElementById("y").value;
+        var s = document.getElementById("s").value;
+
+        var s = (p * r * y) / 100;
+
+        document.getElementById("s").value = s;
+      }
+    </script>
+  </body>
+</html>
